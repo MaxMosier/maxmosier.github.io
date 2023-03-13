@@ -25,7 +25,6 @@ p {
   transition: none;
 
   border: 10px solid rgba(187, 87, 87, 0.8);
-  opacity: 50%;
 }
 @media (max-width: 53em) and (orientation:landscape){
     #selfImage{
