@@ -5,7 +5,7 @@ html {
   --imageH-landscape: 80vh;
   --imageW-landscape: calc(var(--imageH-landscape) / var(--selfImageRatio));
 
-  --imageW-portrait: 90vw;
+  --imageW-portrait: 70vw;
   --imageH-portrait: calc(
     var(--imageW-portrait) * calc(1 / var(--selfImageRatio)));
 }
@@ -25,9 +25,18 @@ p {
 
   border: 10px solid rgba(187, 87, 87, 0.8);
 }
-@media (max-width: calc(1 * calc(var(--imageW-landscape) + var(--allPadding)))){
+@media (max-width: calc(1 * calc(var(--imageW-landscape) + var(--allPadding)))) and (orientation:landscape){
     #selfImage{
         height: calc(0.08 * var(--imageH-landscape));
+    }
+}
+@media(orientation: portrait){
+    #selfImage{
+      width: var(--imageW-portrait);
+      height: auto;
+      transform: translateX(-50%);
+      left: 50%;
+      top: calc(calc( 100% / 6) + 2em + calc( 2 * var(--allPadding)));
     }
 }
 
@@ -45,6 +54,12 @@ p {
   background-color: rgba(187, 87, 87, 0.5);
 
   color: #DCDCDC;
+}
+
+@media (orientation:portrait){
+  #aboutMeBox{
+    width: var(--imageW-portrait);
+  }
 }
 
 /* Below is used to adjust font size without messing up the box's proportions, which were designed at 2/3rds the size */
