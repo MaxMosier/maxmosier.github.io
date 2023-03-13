@@ -1,0 +1,74 @@
+html {
+  --selfImageRatio: 1.5012987; /* h/w */
+  --allPadding: 5vw;
+
+  --imageH-landscape: 80vh;
+  --imageW-landscape: calc(var(--imageH-landscape) / var(--selfImageRatio));
+
+  --imageW-portrait: 90vw;
+  --imageH-portrait: calc(
+    var(--imageW-portrait) * calc(1 / var(--selfImageRatio)));
+}
+
+p {
+    text-indent: 1.5em;
+}
+
+#selfImage {
+  position: absolute;
+  height: var(--imageH-landscape);
+  width: auto;
+  top: 50%;
+  right: var(--allPadding);
+  transform: translateY(-50%);
+  transition: none;
+
+  border: 10px solid rgba(187, 87, 87, 0.8);
+}
+@media (max-width: calc(1 * calc(var(--imageW-landscape) + var(--allPadding)))){
+    #selfImage{
+        height: calc(0.08 * var(--imageH-landscape));
+    }
+}
+
+#aboutMeBox {
+  position: absolute;
+  top: 50%;
+  left: var(--allPadding);
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 1em;
+  height: 20em;
+  width: calc(100vw - 2em - var(--imageW-landscape) - calc(4 * var(--allPadding)));
+
+  overflow: scroll;
+  background-color: rgba(187, 87, 87, 0.5);
+
+  color: #DCDCDC;
+}
+
+/* Below is used to adjust font size without messing up the box's proportions, which were designed at 2/3rds the size */
+#aboutMeText{
+    font-size: 1.5em;
+}
+
+/* Scrollbar stuff: */
+
+::-webkit-scrollbar {
+  width: 0.7em;
+  height: 0.7em;
+  background-color: #171717;
+}
+
+::-webkit-scrollbar-track {
+  background: #bb5050a0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  box-shadow: 0 0 0.8em 0.1em #171717a0 ;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+  box-shadow: 0 0 0.5em 0.1em #aaaaaaf0
+}

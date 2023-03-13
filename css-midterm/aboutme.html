@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="css/aboutme-styleSheet.css">
+    <title>Ṁaximillian Ṁosier : About Me</title>
+  </head>
+  <body>
+    <!--Wow. I've made a lot of inline stuff, which I know we've been told not to do, but I wanted maximum customizability, and didn't want to make a ton of classes/id's-->
+    <!--Outer two: -->
+    <div class="stripeBox" style="--vOff: calc(100% / 6); --direction: 1"></div>
+    <div class="stripeBox" style="--vOff: calc(500% / 6); --direction: 1"></div>
+
+    <!--Inner two:-->
+    <div
+      class="stripeBox"
+      style="
+        --vOff: calc(200% / 6);
+        --direction: -1;
+        --warning-line-color: rgba(187, 87, 87, 0.25);
+        --stripeRate: 10s;
+      "
+    ></div>
+    <div
+      class="stripeBox"
+      style="
+        --vOff: calc(400% / 6);
+        --direction: -1;
+        --warning-line-color: rgba(187, 87, 87, 0.25);
+        --stripeRate: 10s;
+      "
+    ></div>
+
+    <!--Innermost:-->
+    <div
+      class="stripeBox"
+      style="
+        --vOff: calc(300% / 6);
+        --direction: 1;
+        --warning-line-color: rgba(187, 87, 87, 0.0875);
+        --stripeRate: 15s;
+      "
+    ></div>
+
+    <h1>ABOUT ME</h1>
+    <div id="aboutMeBox">
+      <div id="aboutMeText">
+        <p>
+          Hello! My name is Max Mosier, and I'm currently a junior majoring in
+          CTD at CU. In my free time, I enjoy playing the piano, creating
+          illustrations both traditionally and digitally, 3D rendering,
+          programming, and experimenting with various microcontrollers. I'm
+          passionate about learning new skills and expanding my knowledge in
+          these areas.
+        </p>
+        <p>
+          This site was made as my midterm for the class ATLS 2200, and for most
+          of its design process, I was just having fun learning more about how
+          to use CSS!
+        </p>
+    </div>
+    </div>
+    <div class="imageBorderWrapper">
+      <img
+        id="selfImage"
+        src="img/SelfPhoto.png"
+        alt="A picture of site's designer wearing a red shirt, and standing in front of a snowy forest background."
+      >
+    </div>
+  </body>
+</html>
