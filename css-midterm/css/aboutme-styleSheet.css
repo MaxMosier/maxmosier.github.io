@@ -37,7 +37,8 @@ p {
       height: auto;
       transform: translateX(-50%);
       left: 50%;
-      top: calc(calc( 100% / 6) + 2em + calc( 2 * var(--allPadding)));
+      /* Incompatible types? Below works... */
+      top: calc( calc( 100% / 6) + 2em + calc( 2 * var(--allPadding) ) );
     }
 }
 
