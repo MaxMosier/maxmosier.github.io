@@ -208,12 +208,9 @@ html {
   li a{ 
       /* Make it so you can click on the whole block (Or at least, what's what I was trying to do... */
       display: block;
-      /* For some reason I can't determine, t */
+
       height: 100%;
       width: 100%;
-  
-      color: inherit;
-      text-decoration: none;
   
       padding: 0;
       margin: 0;
@@ -335,4 +332,8 @@ html {
 .stripeBox{
   position: fixed;
 }
-  
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
