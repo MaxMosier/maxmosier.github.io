@@ -8,6 +8,8 @@ html {
   --imageW-portrait: 70vw;
   --imageH-portrait: calc(
     var(--imageW-portrait) * calc(1 / var(--selfImageRatio)));
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 p {
@@ -58,7 +60,12 @@ p {
 
 @media (orientation:portrait){
   #aboutMeBox{
+    position: absolute;
     width: var(--imageW-portrait);
+    height: fit-content;
+    transform: translateX(-50%) translateY(50%);
+    left: 50%;
+    top: calc(var(--imageH-portrait) + calc( 100% / 6) + 2em + calc( 4 * var(--allPadding)));
   }
 }
 
@@ -86,4 +93,9 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #eeeeee;
   box-shadow: 0 0 0.5em 0.1em #aaaaaaf0
+}
+
+/* Make the bars not move as you scroll: */
+.stripeBox{
+  position: fixed;
 }
