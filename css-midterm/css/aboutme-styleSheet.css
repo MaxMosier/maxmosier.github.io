@@ -32,7 +32,7 @@ p {
         height: calc(0.08 * var(--imageH-landscape));
     }
 }
-@media(orientation: portrait){
+@media(orientation: portrait), (max-height: 27em){
     #selfImage{
       width: var(--imageW-portrait);
       height: auto;
@@ -58,7 +58,7 @@ p {
   color: #DCDCDC;
 }
 
-@media (orientation:portrait){
+@media (orientation:portrait), (max-height: 27em){
   #aboutMeBox{
     position: absolute;
     width: var(--imageW-portrait);
@@ -72,30 +72,4 @@ p {
 /* Below is used to adjust font size without messing up the box's proportions, which were designed at 2/3rds the size */
 #aboutMeText{
     font-size: 1.5em;
-}
-
-/* Scrollbar stuff: */
-
-::-webkit-scrollbar {
-  width: 0.7em;
-  height: 0.7em;
-  background-color: #171717;
-}
-
-::-webkit-scrollbar-track {
-  background: #bb5050a0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #171717;
-  box-shadow: 0 0 0.8em 0.1em #171717a0 ;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #eeeeee;
-  box-shadow: 0 0 0.5em 0.1em #aaaaaaf0
-}
-
-/* Make the bars not move as you scroll: */
-.stripeBox{
-  position: fixed;
 }
