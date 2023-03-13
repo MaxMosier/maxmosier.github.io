@@ -309,4 +309,30 @@ html {
       left: var(--ending-point);
     }
   }
+
+  /* Scrollbar stuff: Mainly used by the About Me page, but here just in case!*/
+
+::-webkit-scrollbar {
+  width: 0.7em;
+  height: 0.7em;
+  background-color: #171717;
+}
+
+::-webkit-scrollbar-track {
+  background: #bb5050a0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #171717;
+  box-shadow: 0 0 0.8em 0.1em #171717a0 ;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #eeeeee;
+  box-shadow: 0 0 0.5em 0.1em #aaaaaaf0
+}
+
+/* Make the bars not move as you scroll: */
+.stripeBox{
+  position: fixed;
+}
   
