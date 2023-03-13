@@ -6,8 +6,7 @@ html {
   --imageW-landscape: calc(var(--imageH-landscape) / var(--selfImageRatio));
 
   --imageW-portrait: 70vw;
-  --imageH-portrait: calc(
-    var(--imageW-portrait) * calc(1 / var(--selfImageRatio)));
+  --imageH-portrait: calc( var(--imageW-portrait) * var(--selfImageRatio));
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -26,10 +25,11 @@ p {
   transition: none;
 
   border: 10px solid rgba(187, 87, 87, 0.8);
+  opacity: 50%;
 }
-@media (max-width: calc(1 * calc(var(--imageW-landscape) + var(--allPadding)))) and (orientation:landscape){
+@media (max-width: 53em) and (orientation:landscape){
     #selfImage{
-        height: calc(0.08 * var(--imageH-landscape));
+        height: calc(0.8 * var(--imageH-landscape));
     }
 }
 @media(orientation: portrait), (max-height: 27em){
@@ -62,10 +62,11 @@ p {
   #aboutMeBox{
     position: absolute;
     width: var(--imageW-portrait);
-    height: fit-content;
+    height: 20em;
     transform: translateX(-50%) translateY(50%);
     left: 50%;
-    top: calc(var(--imageH-portrait) + calc( 100% / 6) + 2em + calc( 4 * var(--allPadding)));
+    /* top: 1em; */
+    top: calc(var(--imageH-portrait) + calc( 3 * var(--allPadding)));
   }
 }
 
